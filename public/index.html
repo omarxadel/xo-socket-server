@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="m-10">Tic Tac Toe</h1>
+        <div id="game-area"></div>    
+    </div>
+
+    <!-- Main Title Screen that appears when the page loads for the first time -->
+    <script id="intro-screen-template" type="text/template">
+        <div class="container">
+            <h2 class="m-10">Main Menu</h2>
+            <div class="btn-group">
+                <button id="btnCreateGame" class="btn btn-primary m-10">Create</button>
+                <button id="btnJoinGame" class="btn btn-primary m-10">Join</button>
+            </div>
+        </div>
+    </script>    
+
+    <!-- This screen appears when a user clicks "CREATE" on the Title Screen -->
+    <script id="create-game-template" type="text/template">
+        <div class="container">
+            <div class="info">Open this site on your mobile device:</div>
+            <div id="gameURL" class="infoBig">Error!</div>
+            <div class="info">Then click <strong>JOIN</strong> and <br/> enter the following Game ID:</div>
+            <div id="spanNewGameCode" class="infoBig">Error!</div>
+            <div id="playersWaiting"></div>
+            <button id="back-create" class="btn btn-primary m-10">Back</button>
+        </div>
+    </script>
+
+    <!-- This scrreen appears when a player clicks "JOIN" on the Title Screen -->
+    <script id="join-game-template" type="text/template">
+        <div class="joinGameWrapper">
+            <div class="info">
+                <input id="inputPlayerName" class="form-control m-10" placeholder="Your name" type="text" required/>
+            </div>
+            <div class="info">
+                <input id="inputGameId" class="form-control m-10" placeholder="Game ID" type="number" required/>
+            </div>
+            <div class="info buttons">
+                <button id="btnStart" class="btn btn-primary m-10">Start</button>
+                <button id="back-join" class="btn btn-primary m-10">Back</button>
+                <div id="playerWaitingMessage"></div>
+            </div>
+        </div>
+    </script>
+
+    <!-- This is the 'Game' screen. It displays the board for players to play -->
+    <script id="game-template" type="text/template">
+        <div id="playerScores" class="f-space-around">
+            <div id="player1Score" class="scores m-10">
+                <span class="infoBig">0</span><span class="info">Player 1</span>
+            </div>
+            <div id="player2Score" class="scores m-10">
+                <span class="infoBig">0</span><span class="info">Player 2</span>
+            </div>
+        </div>
+        <div class="overlay container" id="overlay">Please wait while player 2 plays</div>
+        <div class="game-board" id="game-board">
+            <div class="box" id="tic1"></div>
+            <div class="box" id="tic2"></div>
+            <div class="box" id="tic3"></div>
+            <div class="box" id="tic4"></div>
+            <div class="box" id="tic5"></div>
+            <div class="box" id="tic6"></div>
+            <div class="box" id="tic7"></div>
+            <div class="box" id="tic8"></div>
+            <div class="box" id="tic9"></div>
+        </div>
+    </script>
+
+    <script src="libs/jquery-2.0.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
