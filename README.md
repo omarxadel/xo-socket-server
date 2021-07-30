@@ -10,7 +10,7 @@ Tic Tac Toe multiplayer game using Express server with Socket.IO.
     <br />
     <a href="https://xo-socket-server.herokuapp.com/">Try Demo</a>
     .
-    <a href="https://github.com/othneildrew/omarxadel/xo-socket-server/issues">Report Bug</a>
+    <a href="https://github.com/omarxadel/xo-socket-server/issues">Report Bug</a>
     ·
     <a href="https://github.com/omarxadel/xo-socket-server/issues">Request Feature</a>
   </p>
